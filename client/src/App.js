@@ -1,6 +1,12 @@
+import Heading from "./components/Heading";
+
 function App() {
   return (
-    <div>Music Box</div>
+    <main className="main">
+      <div className="container">
+        <Heading />
+      </div>
+    </main>
   );
 }
 
