@@ -1,16 +1,13 @@
 import "./index.css";
+import Button from "../Button";
+import InputField from "../InputField";
 
 const SearchForm = () => {
   return (
     <form className="searchForm">
       <div className="searchForm__div">
-        <input
-          type="search"
-          className="searchField"
-          name="q"
-          placeholder="Enter song or artist name"
-        />
-        <button className="searchButton">Search</button>
+        <InputField />
+        <Button />
       </div>
     </form>
   );

@@ -1,0 +1,12 @@
+.searchField {
+  flex-basis: 92%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #58d9ff;
+  min-width: 0;
+}
+
+.searchField:focus {
+  box-shadow: 0 0 3pt 2pt rgba(89 217 255 / 73%);
+  outline: none;
+}
