@@ -1,0 +1,9 @@
+.songDataContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 60%;
+  gap: 4%;
+  padding: 0 1rem;
+}
