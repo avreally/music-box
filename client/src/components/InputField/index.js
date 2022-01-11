@@ -1,4 +1,4 @@
-import "./index.css";
+import "./styles.css";
 
 const InputField = ({ searchQuery, setSearchQuery }) => {
   const handleInputChange = (event) => {

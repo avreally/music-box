@@ -1,4 +1,4 @@
-import "./index.css";
+import "./styles.css";
 
 const Button = () => {
   return <button className="searchButton">Search</button>;

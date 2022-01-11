@@ -1,9 +1,9 @@
-import "./index.css";
+import "./styles.css";
 
-const AlbumCover = () => {
+const AlbumCover = ({ songData }) => {
   return (
     <div className="albumImgContainer">
-      <img className="albumImg" src="" alt="" />
+      <img className="albumImg" src={songData.songImgUrl} alt="album-cover" />
     </div>
   );
 };

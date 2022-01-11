@@ -1,10 +1,10 @@
-import "./index.css";
+import "./styles.css";
 
-const SongTitleAndName = () => {
+const SongTitleAndName = ({ songData }) => {
   return (
     <div className="songTitleAndNameContainer">
-      <h2 className="songTitle">Title</h2>
-      <h3 className="artistName">Artist</h3>
+      <h2 className="songTitle">{songData.title}</h2>
+      <h3 className="artistName">{songData.artist}</h3>
     </div>
   );
 };

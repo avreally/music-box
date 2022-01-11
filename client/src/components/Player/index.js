@@ -1,8 +1,12 @@
-import "./index.css";
+import "./styles.css";
 
-const Player = () => {
+const Player = ({ songData }) => {
   return (
-    <iframe className="iFrame" title="Apple music player" src="">
+    <iframe
+      className="iFrame"
+      title="Apple music player"
+      src={`https://genius.com/songs/${songData.songId}/apple_music_player`}
+    >
       Player
     </iframe>
   );
