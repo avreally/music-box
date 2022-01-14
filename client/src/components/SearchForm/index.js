@@ -3,16 +3,21 @@ import Button from "../Button";
 import InputField from "../InputField";
 import axios from "axios";
 import { useSearchParams } from "react-router-dom";
+import { useState } from "react";
 
 // Base url for request to the server
 const baseUrl = "http://localhost:3001/api/song";
 
 const SearchForm = ({ setSongData }) => {
-  let [searchParams, setSearchParams] = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const readSearchInput = (event) => {
-    event.preventDefault();
-    return searchParams.get("query");
+  const updateSearchParams = (query) => {
+    if (query) {
+      setSearchParams({ query });
+    } else {
+      setSearchParams({});
+    }
   };
 
   // Request to the server, passing user search request
@@ -25,8 +30,9 @@ const SearchForm = ({ setSongData }) => {
   };
 
   const searchForSong = (event) => {
-    const value = readSearchInput(event);
-    getSong(value).then((result) => {
+    event.preventDefault();
+    updateSearchParams(searchQuery);
+    getSong(searchQuery).then((result) => {
       setSongData(result);
     });
   };
@@ -34,10 +40,7 @@ const SearchForm = ({ setSongData }) => {
   return (
     <form onSubmit={searchForSong} className="searchForm">
       <div className="searchForm__div">
-        <InputField
-          searchParams={searchParams}
-          setSearchParams={setSearchParams}
-        />
+        <InputField searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         <Button />
       </div>
     </form>

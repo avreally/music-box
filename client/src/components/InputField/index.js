@@ -1,13 +1,8 @@
 import "./styles.css";
 
-const InputField = ({ searchParams, setSearchParams }) => {
+const InputField = ({ searchQuery, setSearchQuery }) => {
   const handleInputChange = (event) => {
-    let query = event.target.value;
-    if (query) {
-      setSearchParams({ query });
-    } else {
-      setSearchParams({});
-    }
+    setSearchQuery(event.target.value);
   };
 
   return (
@@ -16,7 +11,7 @@ const InputField = ({ searchParams, setSearchParams }) => {
       className="searchField"
       name="q"
       placeholder="Enter song or artist name"
-      value={searchParams.get("query") || ""}
+      value={searchQuery}
       onChange={handleInputChange}
     />
   );
