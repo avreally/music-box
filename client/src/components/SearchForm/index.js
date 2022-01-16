@@ -3,15 +3,40 @@ import Button from "../Button";
 import InputField from "../InputField";
 import axios from "axios";
 import { useSearchParams } from "react-router-dom";
-import { useState } from "react";
+import { useEffect } from "react";
 
 // Base url for request to the server
 const baseUrl = "http://localhost:3001/api/song";
 
-const SearchForm = ({ setSongData }) => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [searchParams, setSearchParams] = useSearchParams();
+const SearchForm = ({
+  setSongData,
+  setSearchParams,
+  searchQuery,
+  setSearchQuery,
+}) => {
+  // const [searchParams] = useSearchParams();
 
+  useEffect(() => {
+    checkSearchQuery();
+  }, []);
+
+  const checkSearchQuery = () => {
+    if (searchQuery) {
+      getSong(searchQuery).then((result) => {
+        setSongData(result);
+      });
+    }
+    // else {
+    //   return null;
+    // }
+    // searchQuery
+    //   ? getSong(searchQuery).then((result) => {
+    //       setSongData(result);
+    //     })
+    //   : null;
+  };
+
+  // Putting user request to URL
   const updateSearchParams = (query) => {
     if (query) {
       setSearchParams({ query });
@@ -37,11 +62,18 @@ const SearchForm = ({ setSongData }) => {
     });
   };
 
+  // if (searchQuery !== "") {
+  //   console.log("searching");
+  //   getSong(searchQuery).then((result) => {
+  //     setSongData(result);
+  //   });
+  // }
+
   return (
     <form onSubmit={searchForSong} className="searchForm">
       <div className="searchForm__div">
         <InputField searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-        <Button />
+        <Button buttonName="Search" />
       </div>
     </form>
   );

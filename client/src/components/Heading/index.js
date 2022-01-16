@@ -1,8 +1,8 @@
 import "./styles.css";
 
-const Heading = () => {
+const Heading = ({ onClick }) => {
   return (
-    <h1 className="heading">
+    <h1 className="heading" onClick={onClick}>
       <svg
         className="neonlight--pink"
         viewBox="0 0 107 23"

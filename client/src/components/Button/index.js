@@ -1,7 +1,11 @@
 import "./styles.css";
 
-const Button = () => {
-  return <button className="searchButton">Search</button>;
+const Button = ({ buttonName, onClick }) => {
+  return (
+    <button className="searchButton" onClick={onClick}>
+      {buttonName}
+    </button>
+  );
 };
 
 export default Button;
