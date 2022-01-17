@@ -15,14 +15,17 @@ app.listen(PORT, () => {
 
 // Defining variables for Genius API request
 const baseURL = "https://api.genius.com/";
-const searchPath = "search?q=";
+const searchPath = "search";
 const token = process.env.CLIENT_ACCESS_TOKEN;
 const headers = { Authorization: `Bearer ${token}` };
 
 // Defining function for Genius API request
 const getUserSearchResult = async (userQuery) => {
   try {
-    const response = await axios.get(`${baseURL}${searchPath}${userQuery}`, {
+    const response = await axios.get(`${baseURL}${searchPath}`, {
+      params: {
+        q: userQuery,
+      },
       headers,
     });
     return getSongData(response.data.response.hits[0].result);

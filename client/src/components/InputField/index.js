@@ -11,8 +11,8 @@ const InputField = ({ searchQuery, setSearchQuery }) => {
       className="searchField"
       name="q"
       placeholder="Enter song or artist name"
-      onChange={handleInputChange}
       value={searchQuery}
+      onChange={handleInputChange}
     />
   );
 };
