@@ -1,4 +1,4 @@
-.searchButton {
+.button {
   flex-basis: 8%;
   padding: 10px 15px;
   border-radius: 5px;
@@ -8,12 +8,20 @@
   margin-left: 5px;
 }
 
-.searchButton:focus {
+.button:focus {
   box-shadow: 0 0 3pt 2pt rgba(89 217 255 / 73%);
   outline: none;
 }
 
-.searchButton:hover {
+.button:hover {
   cursor: pointer;
   background-color: #2701c1;
+}
+
+.searchButton {
+  flex-basis: 8%;
+}
+
+.copyUrlButton {
+  width: 148px;
 }

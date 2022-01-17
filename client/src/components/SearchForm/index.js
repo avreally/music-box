@@ -2,7 +2,6 @@ import "./styles.css";
 import Button from "../Button";
 import InputField from "../InputField";
 import axios from "axios";
-import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
 
 // Base url for request to the server
@@ -14,8 +13,6 @@ const SearchForm = ({
   searchQuery,
   setSearchQuery,
 }) => {
-  // const [searchParams] = useSearchParams();
-
   useEffect(() => {
     checkSearchQuery();
   }, []);
@@ -26,14 +23,6 @@ const SearchForm = ({
         setSongData(result);
       });
     }
-    // else {
-    //   return null;
-    // }
-    // searchQuery
-    //   ? getSong(searchQuery).then((result) => {
-    //       setSongData(result);
-    //     })
-    //   : null;
   };
 
   // Putting user request to URL
@@ -62,18 +51,11 @@ const SearchForm = ({
     });
   };
 
-  // if (searchQuery !== "") {
-  //   console.log("searching");
-  //   getSong(searchQuery).then((result) => {
-  //     setSongData(result);
-  //   });
-  // }
-
   return (
     <form onSubmit={searchForSong} className="searchForm">
       <div className="searchForm__div">
         <InputField searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-        <Button buttonName="Search" />
+        <Button buttonName="Search" className="button searchButton" />
       </div>
     </form>
   );
