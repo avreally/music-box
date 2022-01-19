@@ -2,7 +2,7 @@ import axios from "axios";
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
-const path = require("path");
+import path from "path";
 
 // Creating and running a server
 const app = express();
@@ -10,7 +10,7 @@ app.use(cors());
 // app.use(express.static("./site"));
 
 // Priority serve any static files.
-app.use(express.static(path.resolve(__dirname, "../client/build")));
+app.use(express.static(path.resolve("client/build")));
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
