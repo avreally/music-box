@@ -13,6 +13,7 @@ function App() {
     searchParams.get("query") ?? ""
   );
   const [copyUrlButtonName, setCopyUrlButtonName] = useState("Copy song URL");
+  const [isLoading, setIsLoading] = useState(false);
 
   const goToHomePage = () => {
     setSongData(undefined);
@@ -46,9 +47,12 @@ function App() {
           setSearchParams={setSearchParams}
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
+          setIsLoading={setIsLoading}
         />
         <div className="resultContainer">
-          {songData !== undefined ? (
+          {isLoading === true ? (
+            <h2 className="loadingText">Loading...</h2>
+          ) : songData !== undefined ? (
             <>
               <SongData songData={songData} />
               <Player songData={songData} />

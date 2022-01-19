@@ -2,7 +2,7 @@ import "./styles.css";
 import Button from "../Button";
 import InputField from "../InputField";
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // Base url for request to the server
 const baseUrl = "http://localhost:3001/api/song";
@@ -12,6 +12,7 @@ const SearchForm = ({
   setSearchParams,
   searchQuery,
   setSearchQuery,
+  setIsLoading,
 }) => {
   useEffect(() => {
     checkSearchQuery();
@@ -45,8 +46,10 @@ const SearchForm = ({
 
   const searchForSong = (event) => {
     event.preventDefault();
+    setIsLoading(true);
     updateSearchParams(searchQuery);
     getSong(searchQuery).then((result) => {
+      setIsLoading(false);
       setSongData(result);
     });
   };
