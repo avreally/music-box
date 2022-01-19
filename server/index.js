@@ -2,13 +2,17 @@ import axios from "axios";
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
+const path = require("path");
 
 // Creating and running a server
 const app = express();
 app.use(cors());
 // app.use(express.static("./site"));
 
-const PORT = 3001;
+// Priority serve any static files.
+app.use(express.static(path.resolve(__dirname, "../client/build")));
+
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
