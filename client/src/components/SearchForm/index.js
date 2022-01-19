@@ -5,7 +5,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 // Base url for request to the server
-const baseUrl = "http://localhost:3001/api/song";
+const baseUrl = "/api/song";
 
 const SearchForm = ({
   setSongData,
