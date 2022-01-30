@@ -7,7 +7,6 @@ import path from "path";
 // Creating and running a server
 const app = express();
 app.use(cors());
-// app.use(express.static("./site"));
 
 // Priority serve any static files.
 app.use(express.static(path.resolve("client/build")));

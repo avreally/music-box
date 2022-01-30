@@ -2,7 +2,7 @@ import "./styles.css";
 import Button from "../Button";
 import InputField from "../InputField";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 // Base url for request to the server
 const baseUrl = "/api/song";
