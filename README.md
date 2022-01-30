@@ -26,7 +26,7 @@ cd client
 npm start
 ```
 
-Runs the app in the development mode.\
+These commands run the app in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 # Technology Stack
