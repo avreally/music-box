@@ -1,6 +1,6 @@
 # About
 
-An app that uses Genius API to search for songs. 
+An app that uses Genius API to search for songs.
 
 # Run application
 
