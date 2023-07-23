@@ -2,14 +2,13 @@ import axios from "axios";
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
-import path from "path";
 
 // Creating and running a server
 const app = express();
 app.use(cors());
 
 // Priority serve any static files.
-app.use(express.static(path.resolve("client/build")));
+app.use(express.static("server/build"));
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
