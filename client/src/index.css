@@ -42,7 +42,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 90%;
-  width: 55%;
+  width: 90%;
   overflow: auto;
   justify-content: flex-start;
   align-items: center;
@@ -56,8 +56,8 @@ body {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  gap: 3%;
-  padding: 2.5rem 3rem 0;
+  gap: 1.5rem;
+  padding: 1.5rem;
 }
 
 /* Result styling */
@@ -73,4 +73,15 @@ body {
   font-size: 1.5rem;
   font-weight: 400;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .main {
+    width: 60%;
+  }
+
+  .container {
+    padding: 2.5rem 3rem 0;
+    gap: 2rem;
+  }
 }

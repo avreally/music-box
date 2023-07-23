@@ -56,10 +56,8 @@ const SearchForm = ({
 
   return (
     <form onSubmit={searchForSong} className="searchForm">
-      <div className="searchForm__div">
-        <InputField searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-        <Button buttonName="Search" className="button searchButton" />
-      </div>
+      <InputField searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <Button buttonName="Search" className="button searchButton" />
     </form>
   );
 };

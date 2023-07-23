@@ -2,14 +2,14 @@
 .searchForm {
   display: flex;
   flex-direction: row;
-  padding: 20px 1rem;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 1rem;
+  padding-top: 2rem;
 }
 
-.searchForm__div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  flex-basis: 100%;
+@media (min-width: 768px) {
+  .searchForm {
+    flex-wrap: nowrap;
+  }
 }
