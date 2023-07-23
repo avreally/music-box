@@ -36,7 +36,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - Node.js
 - Axios
 - Express
-- Heroku
+- Render
 - HTML
 - CSS
 - Responsive layout powered by Flexbox

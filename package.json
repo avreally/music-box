@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "node server",
-    "build": "cd client/ && npm install && npm run build",
+    "build:ui": "rm -rf build && cd client/ && npm run build && cp -r build ../server",
+    "deploy:full": "cd client/ && npm run build:ui && git add . && git commit -m uibuild && git push",
     "dev": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

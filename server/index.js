@@ -46,13 +46,11 @@ const getSongData = (allData) => {
     song_art_image_url: songImgUrl,
   } = allData;
 
-  console.log({ title, artist, songId, songImgUrl });
   return { title, artist, songId, songImgUrl };
 };
 
 // Making Genius API request and sending result back to browser
 app.get("/api/song", async (request, response) => {
   const result = await getUserSearchResult(request.query.search);
-  console.log("searching for", request.query.search);
   response.send(result);
 });

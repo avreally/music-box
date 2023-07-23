@@ -23,7 +23,6 @@ function App() {
   const handleCopySongUrl = () => {
     navigator.clipboard.writeText(window.location.href).then(
       () => {
-        console.log("copied");
         setCopyUrlButtonName("Copied!");
         setTimeout(() => {
           setCopyUrlButtonName("Copy song URL");
