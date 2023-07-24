@@ -1,6 +1,6 @@
 .button {
-  flex-basis: 8%;
   padding: 10px 15px;
+  width: 100%;
   border-radius: 5px;
   border: 2px solid #58d9ff;
   color: #fff;
@@ -19,4 +19,10 @@
 
 .copyUrlButton {
   width: 148px;
+}
+
+@media (min-width: 425px) {
+  .button {
+    width: auto;
+  }
 }

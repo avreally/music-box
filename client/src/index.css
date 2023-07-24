@@ -54,10 +54,18 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
   height: 100%;
   width: 100%;
-  gap: 1.5rem;
   padding: 1.5rem;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.5rem;
 }
 
 /* Result styling */
@@ -76,12 +84,24 @@ body {
 }
 
 @media (min-width: 768px) {
+  .main,
+  .searchContainer {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
   .main {
     width: 60%;
   }
 
   .container {
     padding: 2.5rem 3rem 0;
-    gap: 2rem;
+    gap: 4rem;
+  }
+
+  .searchContainer {
+    gap: 2.5rem;
+    width: 60%;
   }
 }
