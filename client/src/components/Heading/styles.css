@@ -2,14 +2,16 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 10%;
+  gap: 1.5rem;
   margin: 0;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .heading svg {
-  height: 55px;
+  height: 100%;
+  max-height: 3.5rem;
 }
 
 /* Blue neon, class .neonlight--blue works when placed on the <svg> element only. */
@@ -101,4 +103,10 @@
 
 .flicker-animation--2s {
   animation: flicker linear infinite 2s;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    gap: 2.5rem;
+  }
 }

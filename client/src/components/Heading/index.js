@@ -33,7 +33,7 @@ const Heading = ({ onClick }) => {
       </svg>
       <svg
         className="neonlight--pink"
-        viewBox="0 0 73 23"
+        viewBox="0 0 72.5 23"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
