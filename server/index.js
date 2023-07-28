@@ -43,9 +43,10 @@ const getSongData = (allData) => {
     artist_names: artist,
     id: songId,
     song_art_image_url: songImgUrl,
+    release_date_for_display: releaseDate,
   } = allData;
 
-  return { title, artist, songId, songImgUrl };
+  return { title, artist, songId, songImgUrl, releaseDate };
 };
 
 // Making Genius API request and sending result back to browser
