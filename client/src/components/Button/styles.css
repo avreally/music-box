@@ -22,7 +22,7 @@
 }
 
 @media (min-width: 640px) {
-  .button {
+  .searchButton {
     width: auto;
   }
 }
