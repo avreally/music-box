@@ -5,9 +5,10 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  width: 100%;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 640px) {
   .searchForm {
     flex-wrap: nowrap;
   }

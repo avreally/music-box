@@ -21,7 +21,7 @@
   width: 148px;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 640px) {
   .button {
     width: auto;
   }
