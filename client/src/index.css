@@ -56,16 +56,13 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
-  height: 100%;
   width: 100%;
-  padding: 1.5rem;
+  padding: 2.5rem;
+  overflow: hidden;
 }
 
-.searchContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 1.5rem;
+.heading {
+  width: 100%;
 }
 
 /* Result styling */
@@ -73,8 +70,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4%;
-  height: 60%;
+  gap: 1.5rem;
+  width: 100%;
+  padding-bottom: 2rem;
 }
 
 .loadingText {
@@ -83,25 +81,9 @@ body {
   text-align: center;
 }
 
-@media (min-width: 768px) {
-  .main,
-  .searchContainer {
-    width: 70%;
-  }
-}
-
 @media (min-width: 1024px) {
-  .main {
-    width: 60%;
-  }
-
   .container {
-    padding: 2.5rem 3rem 0;
+    padding: 4rem 6rem 0;
     gap: 4rem;
-  }
-
-  .searchContainer {
-    gap: 2.5rem;
-    width: 60%;
   }
 }

@@ -37,8 +37,7 @@ function App() {
   return (
     <main className="main">
       <div className="container">
-        <div className="searchContainer">
-        <Link to="/">
+        <Link to="/" className="heading">
           <Heading onClick={goToHomePage} />
         </Link>
         <SearchForm
@@ -49,7 +48,6 @@ function App() {
           setSearchQuery={setSearchQuery}
           setIsLoading={setIsLoading}
         />
-        </div>
         <div className="resultContainer">
           {isLoading === true ? (
             <h2 className="loadingText">Loading...</h2>
