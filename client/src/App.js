@@ -27,9 +27,6 @@ function App() {
         setTimeout(() => {
           setCopyUrlButtonName("Copy song URL");
         }, 3000);
-      },
-      () => {
-        console.log("failed");
       }
     );
   };
