@@ -51,12 +51,12 @@ function App() {
           ) : songData !== undefined ? (
             <>
               <SongData songData={songData} />
-              <Player songData={songData} />
               <Button
                 buttonName={copyUrlButtonName}
                 onClick={handleCopySongUrl}
                 className="button copyUrlButton"
               />
+              <Player songData={songData} />
             </>
           ) : null}
         </div>
