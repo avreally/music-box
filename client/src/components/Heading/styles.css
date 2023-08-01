@@ -1,15 +1,16 @@
 .heading {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 10%;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
+  max-width: 70vw;
 }
 
-.heading svg {
-  height: 55px;
+.musicBox {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .heading {
+    max-width: 50vw;
+  }
 }
 
 /* Blue neon, class .neonlight--blue works when placed on the <svg> element only. */
@@ -95,10 +96,10 @@
   100%  { opacity: 1;   }
 }
 
-.flicker-animation--3s {
-  animation: flicker linear infinite 3s;
+.flicker-animation--long {
+  animation: flicker linear infinite 5s;
 }
 
-.flicker-animation--2s {
+.flicker-animation--short {
   animation: flicker linear infinite 2s;
 }

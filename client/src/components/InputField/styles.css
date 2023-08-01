@@ -1,9 +1,8 @@
 .searchField {
-  flex-basis: 92%;
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
   border: 2px solid #58d9ff;
-  min-width: 0;
 }
 
 .searchField:focus {

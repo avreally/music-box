@@ -1,9 +1,11 @@
 .songDataContainer {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  height: 60%;
-  gap: 4%;
-  padding: 0 1rem;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .songDataContainer {
+    flex-direction: row;
+  }
 }

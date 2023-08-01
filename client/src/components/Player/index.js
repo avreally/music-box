@@ -2,13 +2,16 @@ import "./styles.css";
 
 const Player = ({ songData }) => {
   return (
-    <iframe
-      className="iFrame"
-      title="Apple music player"
-      src={`https://genius.com/songs/${songData.songId}/apple_music_player`}
-    >
-      Player
-    </iframe>
+    <div className="playerContainer">
+      <iframe
+        className="iFrame"
+        title="Apple music player"
+        allow="encrypted-media"
+        src={`https://genius.com/songs/${songData.songId}/apple_music_player?react=1`}
+      >
+        Player
+      </iframe>
+    </div>
   );
 };
 

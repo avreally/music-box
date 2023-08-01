@@ -27,9 +27,6 @@ function App() {
         setTimeout(() => {
           setCopyUrlButtonName("Copy song URL");
         }, 3000);
-      },
-      () => {
-        console.log("failed");
       }
     );
   };
@@ -37,7 +34,7 @@ function App() {
   return (
     <main className="main">
       <div className="container">
-        <Link to="/">
+        <Link to="/" className="heading">
           <Heading onClick={goToHomePage} />
         </Link>
         <SearchForm
@@ -54,12 +51,12 @@ function App() {
           ) : songData !== undefined ? (
             <>
               <SongData songData={songData} />
-              <Player songData={songData} />
               <Button
                 buttonName={copyUrlButtonName}
                 onClick={handleCopySongUrl}
                 className="button copyUrlButton"
               />
+              <Player songData={songData} />
             </>
           ) : null}
         </div>

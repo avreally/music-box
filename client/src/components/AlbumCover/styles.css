@@ -1,11 +1,14 @@
 .albumImgContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-basis: 48%;
+  width: 100%;
 }
 
 .albumImg {
   width: 100%;
   object-fit: cover;
+}
+
+@media (min-width: 640px) {
+  .albumImgContainer {
+    width: 50%;
+  }
 }
